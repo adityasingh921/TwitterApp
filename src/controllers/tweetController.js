@@ -15,9 +15,9 @@ export const createTweet = (req, res) => {
   res.status(201).json({ message: 'Tweet created successfully', tweet: newTweet });
 }
 
-export const updateTweet = (req, res) => {
-  const tweetId = req.params.id;
-  const updatedTweet = req.body;
-  // Logic to update a tweet by ID
-  res.status(200).json({ message: `Tweet with ID ${tweetId} updated successfully`, tweet: updatedTweet });
-}
+// export const updateTweet = (req, res) => {
+//   const tweetId = req.params.id;
+//   const updatedTweet = req.body;
+//   // Logic to update a tweet by ID
+//   res.status(200).json({ message: `Tweet with ID ${tweetId} updated successfully`, tweet: updatedTweet });
+// }

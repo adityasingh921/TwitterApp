@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import { PORT } from './config/serverConfig.js';
 import apiRouter from './routes/apiRoutes.js';
+import connectDB from './config/dbConfig.js';
 
 const app = express();
 console.log(import.meta);
@@ -36,4 +37,5 @@ app.all('*', (req, res) => {
 
 app.listen(PORT,() => {
     console.log(`Server is running on port ${PORT}`);
+    connectDB();
     });
